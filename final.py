@@ -3,7 +3,7 @@ import google.generativeai as genai
 import requests
 from datetime import datetime
 
-st.set_page_config(page_title="GoExplore- Travel & Exploration Bot", page_icon="🌍")
+st.set_page_config(page_title="GoExplore", page_icon="🌍")
 
 
 gemini_api_key = st.secrets["GEMINI_API_KEY"]
