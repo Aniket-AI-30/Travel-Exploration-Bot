@@ -1,22 +1,18 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
 import google.generativeai as genai
 import requests
 from datetime import datetime
 
 
-load_dotenv()
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
+weather_api_key = st.secrets["WEATHER_API_KEY"]
 
-GENAI_API_KEY = os.getenv("GEMINI_API_KEY")
-WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-
-genai.configure(api_key=GENAI_API_KEY)
+genai.configure(api_key=gemini_api_key)
 
 def get_weather(Destination):
     """Fetches real-time weather details for the given destination."""
     try:
-        weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={Destination}&appid={WEATHER_API_KEY}&units=metric"
+        weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={Destination}&appid={weather_api_key}&units=metric"
         response = requests.get(weather_url)
         weather_data = response.json()
 
