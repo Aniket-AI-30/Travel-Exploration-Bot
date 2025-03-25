@@ -67,7 +67,7 @@ with col1:
 
 with col2:
     Number_of_Travellers = st.number_input("👥 Travellers", min_value=1, value=1)
-    Budget_level = st.number_input("💰 Budget (USD)", min_value=100, value=1000)
+    Budget_level = st.number_input("💰 Budget (INR)", min_value=100, value=1000)
     Interest = st.selectbox("🎯 Interest", ["All", "Adventure", "Culture", "Relaxation", "Wildlife", "Food & Wine", "History", "Shopping", "Nightlife"])
     hotel_type = st.selectbox("🏨 Hotel Type", ["Budget", "Mid-range", "Luxury"])
     flight_type = st.selectbox("🛫 Flight Class", ["Economy", "Business", "First Class"])
