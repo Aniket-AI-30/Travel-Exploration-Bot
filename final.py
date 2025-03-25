@@ -34,7 +34,7 @@ def get_travel_plan(Destination, Departure, travellers, budget, start_date, end_
         model = genai.GenerativeModel("gemini-1.5-flash-latest")
 
         prompt = f"""
-        Plan a well-detailed trip from {Departure} to {Destination} for {travellers} travellers, with a budget of {budget} USD.
+        Plan a well-detailed trip from {Departure} to {Destination} for {travellers} travellers, with a budget of {budget} INR.
         Travel dates: {start_date} to {end_date}.
         The travelers are interested in {Interest}. Please include activities and sightseeing recommendations based on this interest.
         Include:
